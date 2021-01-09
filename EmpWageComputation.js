@@ -7,13 +7,17 @@ function EmployeeWageProgram() {
     const IS_PART_TIME = 2;
     const EMP_RATE_PER_HOUR = 20;
     const NUM_OF_WORKING_DAYS = 20;
+    const MAX_HRS_IN_MONTH = 100;
     let empHrs = 0;
-    let empWage;
-    let empCheck;
+    let empWage = 0;
+    let totalWorkingDays=0;
+    let totalEmpHrs=0;
+    let empCheck =0;
    
-    //UC3
-    for(let i = 0 ; i < NUM_OF_WORKING_DAYS; i++ ){
-         empCheck = Math.floor(Math.random() * 10) % 3;
+    //UC3 
+    while(totalEmpHrs<=MAX_HRS_IN_MONTH && totalWorkingDays<NUM_OF_WORKING_DAYS ){
+        totalWorkingDays++; 
+        empCheck = Math.floor(Math.random() * 10) % 3;
     
         switch(empCheck){
             //UC4
