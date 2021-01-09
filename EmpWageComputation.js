@@ -7,11 +7,14 @@ function EmployeeWageProgram() {
     const IS_PART_TIME = 2;
     const EMP_RATE_PER_HOUR = 20;
     const NUM_OF_WORKING_DAYS = 20;
-    let empHrs;
+    let empHrs = 0;
     let empWage;
-    let empCheck = Math.floor(Math.random() * 10) % 3;
+    let empCheck;
+   
     //UC3
     for(let i = 0 ; i < NUM_OF_WORKING_DAYS; i++ ){
+         empCheck = Math.floor(Math.random() * 10) % 3;
+    
         switch(empCheck){
             //UC4
             case  IS_FULL_TIME:
@@ -28,6 +31,8 @@ function EmployeeWageProgram() {
                 break;
             default:
                 console.log("employee is absent ")
+                empWageDay = empHrs * EMP_RATE_PER_HOUR
+                console.log("employee Wage for a day ",empWageDay)
         }
     }
 }
