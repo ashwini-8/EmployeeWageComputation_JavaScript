@@ -1,21 +1,21 @@
 function EmployeeWageProgram() {
     console.log("Welcome to Employee Wage Computation Program Using JavaScript")
-    let Present = 1;
-    const IS_FULL_TIME = 1;
-    const IS_PART_TIME = 2;
-    const EMP_RATE_PER_HOUR = 20;
-    const NUM_OF_WORKING_DAYS = 20;
-    const MAX_HRS_IN_MONTH = 100;
-    let empHrs = 0;
-    let empWage = 0;
-    let totalWorkingDays = 0;
-    let totalEmpHrs = 0;
-    let empCheck = 0;
-    let  monthlyWage = 0;
+    let Present = 1
+    const IS_FULL_TIME = 1
+    const IS_PART_TIME = 2
+    const EMP_RATE_PER_HOUR = 20
+    const NUM_OF_WORKING_DAYS = 20
+    const MAX_HRS_IN_MONTH = 100
+    let empHrs = 0
+    let empWage = 0
+    let totalWorkingDays = 0
+    let totalEmpHrs = 0
+    let empCheck = 0
+    let  monthlyWage = 0
     
-    for( totalWorkingDays = 0;totalWorkingDays<NUM_OF_WORKING_DAYS;  totalWorkingDays++){
+    for( totalWorkingDays = 0 ; totalWorkingDays<NUM_OF_WORKING_DAYS ; totalWorkingDays++ )  {
        
-        empCheck = Math.floor(Math.random() * 10) % 3;
+        empCheck = Math.floor(Math.random() * 10) % 3
         switch(empCheck){
             case  IS_FULL_TIME:
                 console.log("employee is full time ")
@@ -30,7 +30,7 @@ function EmployeeWageProgram() {
         }
         if(totalEmpHrs<=MAX_HRS_IN_MONTH ){
             empWageDay = empHrs * EMP_RATE_PER_HOUR 
-            monthlyWage = monthlyWage + empWageDay;
+            monthlyWage = monthlyWage + empWageDay
             totalEmpHrs = totalEmpHrs+empHrs
             }
         }
