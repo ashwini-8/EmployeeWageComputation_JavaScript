@@ -16,7 +16,6 @@ function EmployeeWageProgram() {
     for( totalWorkingDays = 0;totalWorkingDays<NUM_OF_WORKING_DAYS;  totalWorkingDays++){
        
         empCheck = Math.floor(Math.random() * 10) % 3;
-    
         switch(empCheck){
             case  IS_FULL_TIME:
                 console.log("employee is full time ")
@@ -25,7 +24,7 @@ function EmployeeWageProgram() {
             case IS_PART_TIME:
                 console.log("employee is part time ")
                 empHrs = 4
-               break;
+                break;
             default:
                 console.log("employee is absent ")
         }
