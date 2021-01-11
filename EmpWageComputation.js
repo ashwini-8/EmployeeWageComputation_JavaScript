@@ -7,33 +7,30 @@ function EmployeeWageProgram() {
     const NUM_OF_WORKING_DAYS = 20
     const MAX_HRS_IN_MONTH = 100
     let empHrs = 0
-    let empWage = 0
     let totalWorkingDays = 0
     let totalEmpHrs = 0
     let empCheck = 0
     let  monthlyWage = 0
     
-    for( totalWorkingDays = 0 ; totalWorkingDays<NUM_OF_WORKING_DAYS ; totalWorkingDays++ )  {
-       
+    while (totalWorkingDays < NUM_OF_WORKING_DAYS && totalEmpHrs < MAX_HRS_IN_MONTH )  {
         empCheck = Math.floor(Math.random() * 10) % 3
         switch(empCheck){
             case  IS_FULL_TIME:
-                console.log("employee is full time ")
+                console.log("employee is full time \t " + "emp hours: ",empHrs)
                 empHrs = 8
                 break;
             case IS_PART_TIME:
-                console.log("employee is part time ")
+                console.log("employee is part time  \t " + "emp hours: ", empHrs)
                 empHrs = 4
                 break;
             default:
-                console.log("employee is absent ")
-        }
-        if(totalEmpHrs<=MAX_HRS_IN_MONTH ){
-            empWageDay = empHrs * EMP_RATE_PER_HOUR 
-            monthlyWage = monthlyWage + empWageDay
-            totalEmpHrs = totalEmpHrs+empHrs
+                console.log("employee is absent \t " + "emp hours: ", empHrs)
             }
+        empWageDay = empHrs * EMP_RATE_PER_HOUR 
+        monthlyWage = monthlyWage + empWageDay
+        totalEmpHrs = totalEmpHrs + empHrs - 4
         }
-    console.log("employee Wage for a Month ",monthlyWage)
+    console.log("employee Wage for a Month ", monthlyWage)
+    console.log("employee hours for a Month ", totalEmpHrs)
 }
 EmployeeWageProgram();
